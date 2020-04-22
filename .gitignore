@@ -127,3 +127,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Hydra Harp
+*.ht2
+
+# Matlab
+*.mat
+
+# Generated
+*.csv
