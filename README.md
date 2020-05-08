@@ -10,13 +10,13 @@ For Installation refer to https://github.com/tsbischof/libpicoquant/blob/master/
 
 To convert the ht2 files to csv you can use:
 
-```python
+```console
 python3 utils/ht2_to_csv.py --format ht2 <PATH_TO_FOLDER>
 ```
 
 or for MATLAB mat files:
 
-```python
+```console
 python3 utils/ht2_to_csv.py --format mat <PATH_TO_FOLDER>
 ```
 
