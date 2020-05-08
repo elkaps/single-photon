@@ -18,14 +18,16 @@ def convert_mat(directory, file_base_name):
 
     with h5py.File(os.path.join(directory, file_base_name+'.mat'), 'r') as file:
 
-        sync = np.array(file['Sync'][:, 0])
-        
-        time = np.array(file['Time'][:, 0])
+        sync = np.array(file['Sync'][:, 0], dtype=np.uint8)
+        time = np.array(file['Time'][:, 0], dtype=np.uint64)
 
-        np.savetxt(os.path.join(directory, file_base_name+'.csv'),
-                   np.transpose([sync, time]), delimiter=',')
+    sync = np.trim_zeros(sync)
+    time = np.trim_zeros(time)
 
-        print('saved {}'.format(os.path.join(directory, file_base_name+'.csv')))
+    np.savetxt(os.path.join(directory, file_base_name+'.csv'),
+               np.transpose([sync, time]), fmt=['%d', '%d'], delimiter=',')
+
+    print('saved {}'.format(os.path.join(directory, file_base_name+'.csv')))
 
 
 if __name__ == "__main__":

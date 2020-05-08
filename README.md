@@ -19,3 +19,5 @@ or for MATLAB mat files:
 ```python
 python3 utils/ht2_to_csv.py --format mat <PATH_TO_FOLDER>
 ```
+
+Alternative: The data can also be saved as a csv using MATLAB
