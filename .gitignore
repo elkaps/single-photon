@@ -136,3 +136,4 @@ dmypy.json
 
 # Generated
 *.csv
+*.pdf
